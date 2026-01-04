@@ -40,6 +40,15 @@ h1{
     margin-top:0;
 }
 
+line {
+  height: 1px;
+  display: block;
+  background: linear-gradient(90deg,var(--accent-1),transparent);
+  margin-top: 5px;
+  margin-bottom: 5px;
+  width: 90%;
+}
+
 body{
     background-image:var(--background-img);
     color:var(--text-colour);
