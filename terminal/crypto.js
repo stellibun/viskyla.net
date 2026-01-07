@@ -1,5 +1,14 @@
 let files = document.getElementById("files");
 
+let encrypt = (plainText, password) => {
+    return CryptoJS.AES.encrypt(plainText, password, "{ mode: CryptoJS.mode.CBC, padding: CryptoJS.pad.Pkcs7 }");
+}
+
+let decrypt = (cipherString, password) => {
+    return CryptoJS.AES.decrypt(cipherString, password, "{ mode: CryptoJS.mode.CBC, padding: CryptoJS.pad.Pkcs7 }").toString(CryptoJS.enc.Utf8);
+}
+
 files.addEventListener('change',function(){
-    alert(this.value);
+    let img = document.createElement("img");
+    img.src = "data:image/png;base64,"+ decrypt(this.value,"zerty");
 });
