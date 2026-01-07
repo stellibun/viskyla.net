@@ -11,7 +11,7 @@ let decrypt = (cipherString, password) => {
 files.addEventListener('change',function(){
     let img = document.createElement("img");
     fetch(this.value).then(data=>{
-        img.src = "data:image/png;base64,"+ decrypt(data.text(),"lesbian");
+        img.src = "data:image/png;base64,"+data.text();//decrypt(data.text(),"lesbian");
     });
     files.parentNode.insertBefore(img,files.nextSibling);
 });
