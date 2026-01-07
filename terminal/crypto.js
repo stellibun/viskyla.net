@@ -11,5 +11,5 @@ let decrypt = (cipherString, password) => {
 files.addEventListener('change',function(){
     let img = document.createElement("img");
     img.src = "data:image/png;base64,"+ decrypt(this.value,"zerty");
-    img.insertAdjacentElement(files,img);
+    img.insertAdjacentElement(files.DOCUMENT_POSITION_FOLLOWING,img);
 });
